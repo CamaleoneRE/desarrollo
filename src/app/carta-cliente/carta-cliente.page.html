@@ -1,0 +1,187 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carta_cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-infinite-scroll> 
+    <ion-grid> 
+     <ion-row padding>
+        <ion-col *ngFor="let c of [1];">
+         <ion-card>
+            <ion-img src="assets/icon/Pollo.jpg"></ion-img> 
+            <ion-textarea>
+             2 presas de pollo broaster
+             <br>
+             Gaseosa:
+             <br>
+             <ion-item>
+              <ion-label>Seleccionar bebida</ion-label>
+              <ion-select placeholder="Select One" cancelText="Cancel" okText="Aceptar">
+                <ion-select-option value="MANZANA">Manzana</ion-select-option>
+                <ion-select-option value="PEPSI">Pepsi</ion-select-option>
+                <ion-select-option value="COLOMBIANA">Colombiana</ion-select-option>
+              </ion-select>
+             </ion-item>
+             <br>
+             Papas a la francesa
+            </ion-textarea>
+            <div class="ion-text-center">
+              <ion-button (click)="presentAlert()">
+               Comprar
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>  
+     </ion-row>
+
+     <ion-row padding>
+        <ion-col *ngFor="let c of [1];">
+         <ion-card>
+            <ion-img src="assets/icon/1.jpeg"></ion-img> 
+            <ion-textarea>
+             2 presas de pollo broaster
+             <br>
+              Bebida
+              <ion-item>
+                <ion-label>Seleccionar bebida</ion-label>
+                <ion-select placeholder="Select One" cancelText="Cancel" okText="Aceptar">
+                  <ion-select-option value="MANZANA">Manzana</ion-select-option>
+                  <ion-select-option value="PEPSI">Pepsi</ion-select-option>
+                  <ion-select-option value="COLOMBIANA">Colombiana</ion-select-option>
+                </ion-select>
+              </ion-item>
+             <br>
+             Papas a la francesa
+            </ion-textarea>
+            <div class="ion-text-center">
+              <ion-button (click)="presentAlert()">
+                Comprar
+              </ion-button>
+            </div>
+
+          </ion-card>
+        </ion-col>  
+     </ion-row>
+
+     <ion-row padding>
+       <ion-col *ngFor="let c of [1];">
+         <ion-card>
+           <ion-img src="assets/icon/2.jpeg"></ion-img> 
+           <ion-textarea>
+            2 presas de pollo broaster
+            <br>
+            1vaso de gaseosa (cualquier sabor)
+            <ion-item>
+              <ion-label>Seleccionar bebida</ion-label>
+              <ion-select placeholder="Select One" cancelText="Cancel" okText="Aceptar">
+                <ion-select-option value="MANZANA">Manzana</ion-select-option>
+                <ion-select-option value="PEPSI">Pepsi</ion-select-option>
+                <ion-select-option value="COLOMBIANA">Colombiana</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <br>
+            Papas a la francesa
+           </ion-textarea> 
+           <div class="ion-text-center">
+            <ion-button (click)="presentAlert()">
+              Comprar
+            </ion-button>
+           </div>
+         </ion-card>
+       </ion-col>  
+     </ion-row>
+
+      <ion-row padding>
+        <ion-col *ngFor="let c of [1];">
+         <ion-card>
+            <ion-img src="assets/icon/3.jpeg"></ion-img> 
+            <ion-textarea>
+             2 presas de pollo broaster
+             <br>
+             Bebida:
+             <br>
+             <ion-item>
+              <ion-label>Seleccionar sabor</ion-label>
+              <ion-select placeholder="Select One" cancelText="Cancel" okText="Okay!">
+                <ion-select-option value="MANZANA">Manzana</ion-select-option>
+                <ion-select-option value="PEPSI">Pepsi</ion-select-option>
+                <ion-select-option value="COLOMBIANA">Colombiana</ion-select-option>
+              </ion-select>
+             </ion-item>
+             <br>
+             Papas a la francesa
+            </ion-textarea>
+            <div class="ion-text-center">
+              <ion-button (click)="presentAlert()">
+                Comprar
+              </ion-button>
+            </div>
+          </ion-card>
+        </ion-col>  
+     </ion-row>
+
+     <ion-row padding>
+      <ion-col *ngFor="let c of [1];">
+       <ion-card>
+          <ion-img src="assets/icon/4.jpeg"></ion-img> 
+          <ion-textarea>
+           2 presas de pollo broaster
+           <br>
+           Gaseosa:
+           <br>
+           <ion-item>
+            <ion-label>Seleccionar sabor</ion-label>
+            <ion-select placeholder="Select One" cancelText="Cancel" okText="Okay!">
+              <ion-select-option value="MANZANA">Manzana</ion-select-option>
+              <ion-select-option value="PEPSI">Pepsi</ion-select-option>
+              <ion-select-option value="COLOMBIANA">Colombiana</ion-select-option>
+            </ion-select>
+           </ion-item>
+           <br>
+           Papas a la francesa
+          </ion-textarea>
+          <div class="ion-text-center">
+            <ion-button (click)="presentAlert()">
+              Comprar
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>  
+     </ion-row>
+
+     <ion-row padding>
+      <ion-col *ngFor="let c of [1];">
+       <ion-card>
+          <ion-img src="assets/icon/5.jpeg"></ion-img> 
+          <ion-textarea>
+           2 presas de pollo broaster
+           <br>
+           Bebida:
+           <br>
+           <ion-item>
+            <ion-label>Seleccionar</ion-label>
+            <ion-select placeholder="Select One" cancelText="Cancel" okText="Okay!">
+              <ion-select-option value="MANZANA">Manzana</ion-select-option>
+              <ion-select-option value="PEPSI">Pepsi</ion-select-option>
+              <ion-select-option value="COLOMBIANA">Colombiana</ion-select-option>
+            </ion-select>
+           </ion-item>
+           <br>
+           Papas a la francesa
+          </ion-textarea>
+
+          <div class="ion-text-center">
+            <ion-button (click)="presentAlert()">
+              Comprar
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>  
+     </ion-row>
+      
+    </ion-grid>
+  </ion-infinite-scroll>
+</ion-content>
+
