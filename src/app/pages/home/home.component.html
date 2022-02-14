@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="subtitulo ion-text-wrap">
+      Camaleone
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+        <ion-icon
+          color="tertiary"
+          slot="icon-only"
+          name="menu-sharp"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/carrito']"  >
+        <ion-icon
+          color="tertiary"
+          slot="icon-only"
+          name= "cart-sharp"
+        ></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/perfil']"  >
+        <ion-icon
+          color="tertiary"
+          slot="icon-only"
+          name= "person-sharp"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+
+  <ion-item *ngFor="let producto of productos">
+    <app-producto [producto]=producto > </app-producto>
+  </ion-item>
+
+
+</ion-content>

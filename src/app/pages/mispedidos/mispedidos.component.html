@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="subtitulo ion-text-wrap">
+      Mis pedidos
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+        <ion-icon
+          color="tertiary"
+          slot="icon-only"
+          name="menu-sharp"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/']" (click)="openMenu()">
+        <ion-icon
+          color="tertiary"
+          slot="icon-only"
+          name= "storefront-sharp"
+        ></ion-icon>
+      </ion-button>
+
+      <ion-button [routerLink]="['/perfil']"  >
+        <ion-icon
+          color="tertiary"
+          slot="icon-only"
+          name= "person-sharp"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div md="5" >
+    <ion-segment color="success" (ionChange)="changeSegment($event)" value="nuevos">
+      <ion-segment-button value="nuevos">
+        <ion-label class="normal">nuevos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="culminados">
+        <ion-label class="normal">culminados</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+</div>
+
+
+  <ion-card *ngFor="let pedido of pedidos" class="mt-5 mb-5">
+    <ion-item>
+      <ion-label class="normal">
+        Estado: {{pedido.estado}}
+        <p>
+          Mesa: {{pedido.cliente.mesa}}
+        </p>
+        <p>
+          Nombre: {{pedido.cliente.nombre}}
+        </p>
+          <p>
+            fecha: {{pedido.fecha.seconds*1000 | date:'medium'}}
+          </p>
+      </ion-label>
+    </ion-item>
+    <app-itemcarrito *ngFor="let producto of pedido.productos"
+    [productoPedido]="producto" [botones]=false></app-itemcarrito>
+  </ion-card>
+
+
+
+
+
+
+
+</ion-content>
+
